@@ -18,64 +18,70 @@
     
     <br>
     <hr>
-    <p> SETUP </p>
     
-    <button type="button" onclick="generateObjects()">Generate</button>
+    <div class="float-parent-element">
     
-    <p>Num Objects ------<input id="numObjects"></p>
-    
-    <form oninput="DENSITY.value=parseFloat(density.value)">
-      <p>Density ------------
-      <input type="range" value="1" step="0.001" min="1" max="4" id="density"> = <output name="DENSITY"></output>
-      </p>  
-    </form>
+      <div class="float-child-element">
+        <p> SETUP </p>
+
+        <button type="button" onclick="generateObjects()">Generate</button>
+
+        <p>Num Objects ------<input id="numObjects"></p>
+
+        <form oninput="DENSITY.value=parseFloat(density.value)">
+          <p>Density ------------
+          <input type="range" value="1" step="0.001" min="1" max="4" id="density"> = <output name="DENSITY"></output>
+          </p>  
+        </form>
+
+        <form oninput="MINSIZE.value=parseInt(minSize.value)">
+          <p>Min Size ----------
+          <input type="range" value="3" min="1" max="30" id="minSize"> = <output name="MINSIZE"></output>
+          </p>  
+        </form>
+
+        <form oninput="MAXSIZE.value=parseInt(maxSize.value)">
+          <p>Max Size ----------
+          <input type="range" value = "16" min="1" max="30" id="maxSize"> = <output name="MAXSIZE"></output>
+          </p>  
+        </form>
+      </div>
+
+
+      <div class="float-child-element">
+        <p> RUNTIME </p>
+
+        <form oninput="GRIDSIZE.value=parseInt(gridSize.value)">
+          <p>Grid Size ----------
+          <input type="range" value="50" min="1" max="100"  id="gridSize"> = <output name="GRIDSIZE"></output>
+          </p>  
+        </form>
+
+        <form oninput="SEARCHSIZE.value=parseInt(searchSize.value)">
+          <p>Search Size -------
+          <input type="range" value="3" min="0" max="10" id="searchSize"> = <output name="SEARCHSIZE"></output>
+          </p>  
+        </form>
+
+        <p>Sort By Size -----
+          <input type="checkbox" id="sortBySize">
+        </p>
+
+        <p>Dyn Search Size-
+          <input type="checkbox" id="dynSearchSize">
+          (Overrides "Search Size")
+        </p>
+
+        <p>Querry Type-------
+        <select name="QuerryType" id="querryType">
+          <option value="BruteForce">Brute Force</option>
+          <option value="SpatialCache">Spatial Cache</option>
+        </select>
+        </p>
+      </div>
       
-    <form oninput="MINSIZE.value=parseInt(minSize.value)">
-      <p>Min Size ----------
-      <input type="range" value="3" min="1" max="30" id="minSize"> = <output name="MINSIZE"></output>
-      </p>  
-    </form>
-    
-    <form oninput="MAXSIZE.value=parseInt(maxSize.value)">
-      <p>Max Size ----------
-      <input type="range" value = "16" min="1" max="30" id="maxSize"> = <output name="MAXSIZE"></output>
-      </p>  
-    </form>
-    
-    <hr>
-    
-    <p> RUNTIME </p>
-    
-    <form oninput="GRIDSIZE.value=parseInt(gridSize.value)">
-      <p>Grid Size ----------
-      <input type="range" value="50" min="1" max="100"  id="gridSize"> = <output name="GRIDSIZE"></output>
-      </p>  
-    </form>
-    
-    <form oninput="SEARCHSIZE.value=parseInt(searchSize.value)">
-      <p>Search Size -------
-      <input type="range" value="3" min="0" max="10" id="searchSize"> = <output name="SEARCHSIZE"></output>
-      </p>  
-    </form>
-    
-    <p>Sort By Size -----
-      <input type="checkbox" id="sortBySize">
-    </p>
-    
-    <p>Dyn Search Size-
-      <input type="checkbox" id="dynSearchSize">
-      (Overrides "Search Size")
-    </p>
-    
-    <p>Querry Type-------
-    <select name="QuerryType" id="querryType">
-      <option value="BruteForce">Brute Force</option>
-      <option value="SpatialCache">Spatial Cache</option>
-    </select>
-    </p>
+    </div>
     
     <script src="sketch.js"></script>
   </body>
 </html>
-
-
