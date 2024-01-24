@@ -168,9 +168,11 @@ function bruteVScache(){
 }
 
 function mousePressed(){
-  const gobj = circ(5, createVector(mouseX, mouseY));
-  gobjs.push(gobj);
+  //const gobj = circ(5, createVector(mouseX, mouseY));
+  //gobjs.push(gobj);
   //console.log({x: Math.floor(gobj.pos.x/5), y: Math.floor(gobj.pos.y/5)});
+  frameRateBuffer = 0;
+  frameCount = 0;
 }
 
 function keyPressed(){
